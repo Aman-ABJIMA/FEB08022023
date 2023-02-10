@@ -1,12 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using E_Commerce.Data;
+using E_Commerce.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace E_Commerce.Controllers
 {
     public class ProductController : Controller
     {
-        public IActionResult Index()
+        private readonly AppDbContext _context;
+
+        public ProductController(AppDbContext context)
         {
-            return View();
+            _context = context;
+        }
+        public IActionResult Index()
+        { 
+            List<Product> products= _context.Product.ToList();
+            return View(products);
         }
     }
 }

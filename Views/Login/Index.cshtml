@@ -1,35 +1,159 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-<style>
-    .Box{
+﻿<style>
+    .main {
+        background-color: aliceblue;
+        padding-top: 5%;
+        padding-bottom: 20%;
+        text-align: center;
+        font-size: xx-large;
+    }
+
+    .form-outline {
+        margin: 10px;
+    }
+
+    #loginName, #loginPassword, #registerName, #registerEmail, #registerPassword, #registerRepeatPassword, #registerMobile, #registerAddress {
+        width: 250px;
+        height: 40px;
+        font-size: 25px;
+        border-width: 0.5px;
+        border-color: rgb(90 167 234);
+        border-radius: 2px;
         text-align:center;
-        width:25%;
+        margin-left: 514px;
+    }
+
+    #loginBtn, #btn {
+        background-color: rgb(90 167 234);
+        text-align: center;
+        width: 113px;
+        font-family: system-ui;
+        font-size: 25px;
+        font-weight: bold;
+        color: aliceblue;
+        border-color: slategray;
+    }
+    #loginBtn:hover, #btn:hover{
+        background-color:lightslategray;
+    }
+</style>
+
+<div class="main">
+    <div id="login">
+        <form asp-action="" method="post">
+            <div class="text-center">
+                <p>Login Here</p>
+            </div>
+
+
+
+            <!-- Email input -->
+            <div class="form-outline">
+                <input type="email" id="loginName" class="form-control" placeholder="Email Address" />
+
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline">
+                <input type="password" id="loginPassword" placeholder="Password" class="form-control" />
+
+            </div>
+            <!-- Submit button -->
+            <button type="submit" id="loginBtn">Login</button>
+
+            <!-- Register buttons -->
+            <div class="text-center">
+                <p>Not a member? Register below</p>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="Register">
+        <form>
+
+
+
+            <!-- Name input -->
+            <div class="form-outline mb-4">
+                <input type="text" id="registerName" class="form-control" placeholder="Full Name" />
+            </div>
+
+
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <input type="email" id="registerEmail" class="form-control" placeholder="Email" />
+            </div>
+
+            <div class="form-outline mb-4">
+                <input type="number" id="registerMobile" class="form-control" placeholder="Mobile No" />
+            </div>
+
+
+            <div class="form-outline mb-4">
+                <input type="text" id="registerAddress" class="form-control" placeholder="Address" />
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <input type="password" id="registerPassword" class="form-control" placeholder="password" />
+            </div>
+
+            <!-- Repeat Password input -->
+            <div class="form-outline mb-4">
+                <input type="password" id="registerRepeatPassword" class="form-control" placeholder="Repeat password" />
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" id="btn">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+@*<style>
+    .Box{
+        text-align: center;
+        width: 99%;
+        outline: dotted;
+        padding: 66px;
+        padding-top: 48px;
+    }
+    .btn{
+        background-color: rgb(90 167 234);
+        text-align: center;
+        width: 113px;
+    font-family: system-ui;
+    font-size: 25px;
+    font-weight: bold;
+    color: aliceblue;
     }
 </style>
 
 
 <div class="Box">    
-    <div class="card">        
+         
            
            
-        <div class="mt-5 text-center lr-bg">   
+          
             <h1 class="head">Lets Go!</h1>
-            <a asp-area="" asp-controller="Account" asp-action="Login" type="Button" class="login">
-                <button type="button" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+            <a asp-area="" asp-controller="" asp-action="Login" type="Button" class="login">
+                <button type="button" class="btn">Login</button>
             </a>
            
-          <span class="text-muted d-block mb-2">Or</span>
+         @* <span class="text-muted d-block mb-2">Or</span><br />
               
             <a asp-area="" asp-controller="Account" asp-action="Register" type="Button" class="Register">
-                <button type="button" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Register</button>
+             <button type="button" class="btn">Register</button>
             </a>
-        </div>    
-    </div>
+         
+   
         
     
 </div>
-
+*@
 
