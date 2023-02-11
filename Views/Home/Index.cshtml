@@ -5,12 +5,12 @@
 @model IEnumerable<Product>
 
 <style>
-    #Bags,#Kitchen{
+    #Bags,#Kitchen,#Shoes{
         width:100%;
         background-color:white;
     }
     .bag:hover{
-        
+        ruby-position:over;
     }
 
 </style>
@@ -24,24 +24,24 @@
   <br>
  
 
-<div class="album py-5 bg-light">
+@*<div class="album py-5 bg-light">
     <div class="container">
         <div class="row">
             @foreach (var item in Model)
             {
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src="@item.Product_Image" style="height: 225px; width: 100%; display: block;">
+                        <img class="card-img-top" src="@item.Product_Image" @* style="height: 225px; width: 100%; display: block;">
                         <div class="card-body">
                             <p class="card-text">@item.Product_Name</p>
-                            <p class="card-text">@item.Product_Price</p>
+                            <p class="card-text">@item.Product_Price INR</p>
                             <p class="card-text">@item.Product_Description</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                                     <button type="button" class="btn btn-sm btn-outline-secondary">Cart</button>
                                 </div>
-                                <small class="text-muted">sale</small>
+                                <small class="text-muted" style="color:red;">SALE</small>
                             </div>
                         </div>
                     </div>
@@ -49,7 +49,7 @@
             }
         </div>
     </div>
-</div>
+</div>*@
    <table id="Bags">
             <tr>
                 <th colspan="5">
@@ -67,18 +67,18 @@
             <th><img src="~/css/bag1.webp" width="80%" class="bag"/></th>
         </tr>
 
-        <tr style="color:green">
+       @* <tr style="color:green">
             <th>INR:289</th>
             <th>INR:879</th>
             <th>INR:459</th>
             <th>INR:419</th>
             <th>INR:789</th>
-        </tr>
+        </tr>*@
     </table>
     <br>
 <table id="Kitchen">
     <tr>
-        <th colspan="7">
+        <th colspan="5">
             <h2>Kitchen Appliances</h2>
             <hr>
         </th>
@@ -90,8 +90,24 @@
         <th><img src="~/css/kitchen1.webp" width="80%" /></th>
         <th><img src="~/css/kitchen1.webp" width="80%" /></th>
         <th><img src="~/css/kitchen1.webp" width="80%" /></th>
-        <th><img src="~/css/kitchen1.webp" width="80%" /></th>
-        <th><img src="~/css/kitchen1.webp" width="80%" /></th>
+       
+    </tr>
+</table>
+<table id="Shoes">
+    <tr>
+        <th colspan="5">
+            <h2>Shoes Collection</h2>
+            <hr>
+        </th>
+    </tr>
+
+    <tr>
+        <th><img src="~/css/shoes.webp" width="100%" /></th>
+        <th><img src="~/css/shoes.webp" width="100%" /></th>
+        <th><img src="~/css/shoes.webp" width="100%" /></th>
+        <th><img src="~/css/shoes.webp" width="100%" /></th>
+        <th><img src="~/css/shoes.webp" width="100%" /></th>
+      
     </tr>
 </table>
 <div class="text-center">

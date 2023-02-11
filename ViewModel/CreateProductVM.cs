@@ -1,16 +1,13 @@
-﻿#nullable disable
-using E_Commerce.Data.Enum;
-using System.ComponentModel.DataAnnotations;
+﻿using E_Commerce.Data.Enum;
 
-namespace E_Commerce.Models
+namespace E_Commerce.ViewModel
 {
-    public class Product
+    public class CreateProductVM
     {
-        [Key]
         public int Product_ID { get; set; }
         public string Product_Name { get; set; }
         public string Product_Description { get; set; }
-        public string Product_Image { get; set;}
+        public IFormFile Product_Image { get; set; }
         public int Product_Price { get; set; }
         public ProductCategory Product_Category { get; set; }
 

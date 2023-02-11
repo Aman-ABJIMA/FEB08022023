@@ -35,8 +35,16 @@
         }
 
 
-        #e1:hover, #e2:hover, #e3:hover, #e4:hover, #company:hover, #logSign:hover, #more:hover, #cart:hover {
+        #e1:hover, #e2:hover, #e3:hover, #e4:hover, #company:hover, #more:hover{
             color:darkgray;
+        }
+        #cart:hover, #logSign:hover{
+         /*width:438px;*/
+          color:white;
+        }
+        #logSign{
+
+            transition: width 0.5s;
         }
 
         #search {
@@ -89,7 +97,7 @@
             <th><img src="~/css/logoAMAZON-removebg-preview.png" alt="logo" width="75%" id="logo"></th>
             <th id="company">amanzone.com</th>
             <th><input type="text" placeholder="Search products, brands and more..." id="search"></th>
-            <th style="width: 438px;" id="logSign"><a style="text-decoration:none;color:white;" asp-controller="Login">Login&Signup</a></th>
+            <th id="logSign" style="width:438px"><a style="text-decoration:none;color:white;", asp-controller="Login">Login&Signup</a></th>
             <th id="more">About</th>
             <th id="cart"><img src="~/css/cart.png" alt="Cart" width="20%"></th>
         </tr>

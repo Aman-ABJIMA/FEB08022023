@@ -1,4 +1,8 @@
 using E_Commerce.Data;
+using E_Commerce.Helper;
+using E_Commerce.Interface;
+using E_Commerce.Repository;
+using E_Commerce.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace E_Commerce
@@ -15,7 +19,9 @@ namespace E_Commerce
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
-
+            builder.Services.AddScoped<IPhotoServices,PhotoService>();
+            builder.Services.AddScoped<IProductRepository,ProductRepository>();
+            builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("CloudinarySettings"));
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
