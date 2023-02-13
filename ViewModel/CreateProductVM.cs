@@ -1,5 +1,5 @@
 ﻿using E_Commerce.Data.Enum;
-
+#nullable disable
 namespace E_Commerce.ViewModel
 {
     public class CreateProductVM

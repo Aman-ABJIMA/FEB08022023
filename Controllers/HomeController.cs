@@ -19,7 +19,6 @@ namespace E_Commerce.Controllers
 
         public IActionResult Index()
         {
-
             List<Product> products = _context.Product.ToList();  
             return View(products);
         }

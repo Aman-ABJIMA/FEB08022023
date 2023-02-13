@@ -1,4 +1,9 @@
-﻿<style>
+﻿@using E_Commerce.ViewModel;
+@model LoginVM
+@{
+    ViewData["Title"]= "Login";
+}
+<style>
     .main {
         background-color: aliceblue;
         padding-top: 5%;
@@ -18,7 +23,7 @@
         border-width: 0.5px;
         border-color: rgb(90 167 234);
         border-radius: 2px;
-        text-align:center;
+        text-align: center;
         margin-left: 514px;
     }
 
@@ -32,19 +37,25 @@
         color: aliceblue;
         border-color: slategray;
     }
-    #loginBtn:hover, #btn:hover{
-        background-color:lightslategray;
-    }
-</style>
 
+        #loginBtn:hover, #btn:hover {
+            background-color: lightslategray;
+        }
+</style>
+@*@if (TempData["Error"] != null)
+{
+    <div class="col-md-12 alert alter-danger">
+        <span><b>Sorry!</b>- @TempData["Error"]</span>
+    </div>
+}*@
 <div class="main">
     <div id="login">
-        <form asp-action="" method="post">
+        <form asp-action="Login" method="post">
             <div class="text-center">
                 <p>Login Here</p>
             </div>
 
-
+          
 
             <!-- Email input -->
             <div class="form-outline">
@@ -136,24 +147,24 @@
 
 
 <div class="Box">    
-         
-           
-           
-          
+
+
+
+
             <h1 class="head">Lets Go!</h1>
             <a asp-area="" asp-controller="" asp-action="Login" type="Button" class="login">
                 <button type="button" class="btn">Login</button>
             </a>
-           
+
          @* <span class="text-muted d-block mb-2">Or</span><br />
-              
+
             <a asp-area="" asp-controller="Account" asp-action="Register" type="Button" class="Register">
              <button type="button" class="btn">Register</button>
             </a>
-         
-   
-        
-    
+
+
+
+
 </div>
 *@
 

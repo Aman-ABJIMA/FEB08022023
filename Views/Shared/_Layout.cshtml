@@ -52,7 +52,7 @@
             width: 346px;
             height: 40px;
             font-weight: bold;
-            /* padding: 5px; */
+            /*padding: 5px;*/
             border-radius: 2%;
             border: aqua;
             margin-right: 220px;
@@ -70,13 +70,17 @@
             color: white;
             font-size: 20px;
         }
+        .header{
+            overflow:clip;
+            text-align: center;
+        }
         body{
             background-color:aliceblue;
         }
 
         .dropdown1 , .dropdown2 , .dropdown3 , .dropdown4{
             position:relative;
-            display:inline-block
+            display:inline-block;
         }
        .dropdown1 #dropdown-content, .dropdown2 #dropdown-content, .dropdown3 #dropdown-content, .dropdown4 #dropdown-content{
             display:none;
@@ -90,30 +94,36 @@
             .dropdown1:hover #dropdown-content, .dropdown2:hover #dropdown-content, .dropdown3:hover #dropdown-content , .dropdown4:hover #dropdown-content {
             display:block;
         }
+       
 
     </style>
-    <table id="tab1">
+    <header class="header" >
+      <table id="tab1">
         <tr style="padding:15px; padding-inline:61px;">
-            <th><img src="~/css/logoAMAZON-removebg-preview.png" alt="logo" width="75%" id="logo"></th>
-            <th id="company">amanzone.com</th>
-            <th><input type="text" placeholder="Search products, brands and more..." id="search"></th>
-            <th id="logSign" style="width:438px"><a style="text-decoration:none;color:white;", asp-controller="Login">Login&Signup</a></th>
-            <th id="more">About</th>
-            <th id="cart"><img src="~/css/cart.png" alt="Cart" width="20%"></th>
+            <th width="15%"><img src="~/css/logoAMAZON-removebg-preview.png" alt="logo" width="75%" id="logo"></th>
+            <th width="15%" id="company">amanzone.com</th>
+            <th width="15%"><input type="text" placeholder="Search products, brands and more..." id="search"></th>
+            <th width="15%" id="logSign" style="width:438px"><a style="text-decoration:none;color:white;"  asp-controller="Home" asp-action="Index">Home</a></th>
+            <th width="15%" id="logSign" style="width:438px"><a style="text-decoration:none;color:white;padding-left:64px;" asp-controller="Account" asp-action="Login">Login&Signup</a></th>
+            <th width="15%" id="more">About</th>
+            <th width="15%" id="cart"><img src="~/css/cart.png" alt="Cart" width="20%"></th>
         </tr>
-    </table>
+      </table>
+    </header>
+ 
+    
 
     <table id="tab2">
         <tr>
 
             <th width="12%">
                  <div class="dropdown1">
-                   <span id="e1">Electronics</span>
+                     <span id="e1">Electronics</span>
                         <div id="dropdown-content">
-                         <p>Mobiles</p>
-                         <p>Laptop</p>
-                         <p>Friedge</p>
-                         <p>Charger</p>
+                           <p>Mobiles</p>
+                           <p>Laptop</p>
+                           <p>Friedge</p>
+                           <p>Charger</p>
                         </div>
                  </div>
             </th>
