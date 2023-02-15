@@ -9,7 +9,7 @@ namespace E_Commerce.ViewModel
         public string Product_Description { get; set; }
         public IFormFile Product_Image { get; set; }
         public int Product_Price { get; set; }
-        public ProductCategory Product_Category { get; set; }
+        public int Product_Category { get; set; }
 
     }
 }

@@ -1,6 +1,6 @@
 ﻿@using E_Commerce.Data.Enum;
 @using E_Commerce.ViewModel;
-@model CreateProductVM
+@model Product
 <form asp-action="Create" method="post" enctype="multipart/form-data">
     <input type="hidden" id="Product_Id" name="Id" asp-for="Product_ID" />
     <div class="form-group">
@@ -15,8 +15,8 @@
     </div>
 
     <div class="form-group">
-        <labal asp-for="Product_Image">Image</labal>
-        <input asp-for="Product_Image" class="form-control" type="file" placeholder="Image">
+        <labal asp-for="Product_Image">Image URL</labal>
+        <input asp-for="Product_Image" class="form-control" placeholder="Image">
         <span asp-validation-for="Product_Image" class="text-danger"></span>
     </div>
     <br />
